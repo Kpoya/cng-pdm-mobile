@@ -7,7 +7,7 @@ source.dir = .
 source.include_exts = py,pkl,txt
 
 version = 0.1
-requirements = python3,kivy,pandas,scikit-learn,numpy  # Removed ==1.6.1 to avoid p4a conflict
+requirements = python3,kivy,pandas,scikit-learn,numpy
 
 [buildozer]
 log_level = 2
