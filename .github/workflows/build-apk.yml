@@ -9,6 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Fix Permissions
+      run: sudo chown -R runner:runner $GITHUB_WORKSPACE
+
     - name: Cache Buildozer
       uses: actions/cache@v4
       with:
@@ -20,7 +23,7 @@ jobs:
       id: commit
       with:
         command: buildozer android debug
-        buildozer-version: master  # Latest for fixes
+        buildozer_version: master  # Fixed: underscore, not hyphen
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
