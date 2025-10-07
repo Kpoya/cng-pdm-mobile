@@ -20,7 +20,7 @@ jobs:
       id: commit
       with:
         command: buildozer android debug
-        buildozer_version: master  # Fixed: underscore
+        buildozer_version: master  # Fixed: underscore, no hyphen
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
